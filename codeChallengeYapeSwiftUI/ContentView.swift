@@ -9,19 +9,23 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-   
+    @ObservedObject var viewModel: RecipeListViewModel
+    
+    init() {
+        let context = PersistenceController.shared.container.viewContext
+        self.viewModel = RecipeListViewModel(context: context)
+    }
+
     var body: some View {
         NavigationView {
             List {
                 Text("Recetas")
             }
-            NavigationLink(destination: AddRecipiesView()) {
-//                Image(systemName: String)
+            NavigationLink(destination: RecipeListView(viewModel: viewModel)) {
+                Text("Ver Recetas")
             }
         }
     }
-
-
 }
 
 struct ContentView_Previews: PreviewProvider {
