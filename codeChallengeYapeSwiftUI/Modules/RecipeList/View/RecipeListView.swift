@@ -10,13 +10,16 @@ import Combine
 import CoreData
 
 struct RecipeListView: View {
-    @ObservedObject var viewModel: RecipeListViewModel
+    @StateObject var viewModel = RecipeListViewModel()
 
     var body: some View {
         NavigationView {
-            List(viewModel.recipes, id: \.id) { recipe in
-                NavigationLink(destination: DetailView(recipe: recipe)) {
-                    RecipeRow(recipe: recipe)
+            List {
+                ForEach(viewModel.recipiesList, id: \.id) { recipe in
+                    NavigationLink(destination: DetailView(recipe: recipe)) {
+                        RecipeRow(recipe: recipe)
+                    }
+                    
                 }
             }
             .navigationBarTitle("Recetas")
@@ -55,27 +58,30 @@ struct RecipeRow: View {
 struct AsyncImage: View {
     @ObservedObject private var imageLoader: ImageLoader
     var url: String
-    
+
     init(url: String) {
         self.url = url
-        _imageLoader = ObservedObject(wrappedValue: ImageLoader())
+        self.imageLoader = ImageLoader()
         if let imageUrl = URL(string: url) {
-            imageLoader.loadImage(from: imageUrl)
+            self.imageLoader.loadImage(from: imageUrl)
         }
     }
-    
+
     var body: some View {
-        if let image = imageLoader.image {
-            Image(uiImage: image)
-                .resizable()
-                .scaledToFit()
-        } else {
-            Image(systemName: "photo")
-                .resizable()
-                .scaledToFit()
+        Group {
+            if let image = imageLoader.image {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+            } else {
+                Image(systemName: "photo")
+                    .resizable()
+                    .scaledToFit()
+            }
         }
     }
 }
+
 
 class ImageLoader: ObservableObject {
     @Published var image: UIImage?
@@ -84,6 +90,7 @@ class ImageLoader: ObservableObject {
     func loadImage(from url: URL) {
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
+            debugPrint("Error al cargar la imagen:, \(error) ")
                 DispatchQueue.main.async {
                     self.error = error
                 }

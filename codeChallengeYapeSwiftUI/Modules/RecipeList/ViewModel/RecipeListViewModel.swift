@@ -7,11 +7,13 @@
 
 import Foundation
 import CoreData
+import Combine
 
 class RecipeListViewModel: ObservableObject {
     private let model: DataLayer
     private var managedObjectContext: NSManagedObjectContext
-    @Published var recipes: [RecipeEntity] = []
+    @Published var recipiesList: [RecipeEntity] = []
+    private var cancellables = Set<AnyCancellable>()
     
     init(context: NSManagedObjectContext) {
         self.managedObjectContext = context
@@ -20,6 +22,7 @@ class RecipeListViewModel: ObservableObject {
     }
     
     func fetchRecipes() {
+        debugPrint("fse usa fetchRecipes() llamado")
         guard let url = URL(string: "https://66340f2a9bb0df2359a0a1b3.mockapi.io/recetas") else {
             print("URL inválida")
             return
@@ -47,18 +50,18 @@ class RecipeListViewModel: ObservableObject {
                 debugPrint("No se pudo obtener datos")
                 return
             }
-            
-            if let jsonString = String(data: data, encoding: .utf8) {
-               // debugPrint("JSON recibido: \(jsonString)")
-            }
+//            
+//            if let jsonString = String(data: data, encoding: .utf8) {
+//               // debugPrint("JSON recibido: \(jsonString)")
+//            }
 
             do {
-                let recipes = try JSONDecoder().decode([RecipeResponse].self, from: data)
-                DispatchQueue.main.async {
+                let recipiesList = try JSONDecoder().decode([RecipeResponse].self, from: data)
+//                DispatchQueue.main.async {
                     // Save recipes to CoreData
-                    debugPrint("response \(recipes)")
-                    self.model.saveRecipiesFromEndPoint(recipes)
-                }
+                    debugPrint("response \(recipiesList)")
+//                    self.model.saveRecipiesFromEndPoint(recipiesList)
+//                }
             } catch {
                 print("Error decodificando JSON: \(error)")
             }

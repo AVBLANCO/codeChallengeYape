@@ -15,12 +15,4 @@ struct RecipeResponse: Decodable {
     let latitudImagen: String?
     let longitudImagen: String?
     
-    enum CodingKeys: String, CodingKey {
-        case id
-        case nombre
-        case imagen
-        case descripcion
-        case latitudImagen
-        case longitudImagen
-    }
 }

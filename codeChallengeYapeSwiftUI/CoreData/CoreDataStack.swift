@@ -54,9 +54,11 @@ class CoreDataStack {
         // Save changes
         do {
             try managedObjectContext.save()
+            publish()
         } catch {
             print("Failed to save recipes to CoreData: \(error)")
         }
+//        publish()
     }
     
     private func publish() {

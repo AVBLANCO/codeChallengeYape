@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		883F0E762BE42AE400C7052D /* codeChallengeYapeSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883F0E752BE42AE400C7052D /* codeChallengeYapeSwiftUIApp.swift */; };
-		883F0E782BE42AE400C7052D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883F0E772BE42AE400C7052D /* ContentView.swift */; };
 		883F0E7A2BE42AE600C7052D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 883F0E792BE42AE600C7052D /* Assets.xcassets */; };
 		883F0E7D2BE42AE600C7052D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 883F0E7C2BE42AE600C7052D /* Preview Assets.xcassets */; };
 		883F0E7F2BE42AE600C7052D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883F0E7E2BE42AE600C7052D /* Persistence.swift */; };
@@ -16,6 +15,7 @@
 		883F0E8C2BE42AE600C7052D /* codeChallengeYapeSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883F0E8B2BE42AE600C7052D /* codeChallengeYapeSwiftUITests.swift */; };
 		883F0E962BE42AE600C7052D /* codeChallengeYapeSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883F0E952BE42AE600C7052D /* codeChallengeYapeSwiftUIUITests.swift */; };
 		883F0E982BE42AE600C7052D /* codeChallengeYapeSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883F0E972BE42AE600C7052D /* codeChallengeYapeSwiftUIUITestsLaunchTests.swift */; };
+		883F2B472BF55A4F000038AC /* RecipeListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883F2B462BF55A4F000038AC /* RecipeListViewModelTests.swift */; };
 		88B8B9E12BF2B6DA00C12A51 /* DataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8B9E02BF2B6DA00C12A51 /* DataLayer.swift */; };
 		88B8B9E32BF2B93C00C12A51 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8B9E22BF2B93C00C12A51 /* CoreDataStack.swift */; };
 		88B8B9E52BF2BBAC00C12A51 /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8B9E42BF2BBAC00C12A51 /* RecipeListView.swift */; };
@@ -24,6 +24,8 @@
 		88B8B9EE2BF2BD6900C12A51 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8B9ED2BF2BD6900C12A51 /* DetailView.swift */; };
 		88B8B9F12BF2C1E500C12A51 /* RecipeEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8B9EF2BF2C1E500C12A51 /* RecipeEntity+CoreDataClass.swift */; };
 		88B8B9F22BF2C1E500C12A51 /* RecipeEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8B9F02BF2C1E500C12A51 /* RecipeEntity+CoreDataProperties.swift */; };
+		88B8B9F42BF4674200C12A51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8B9F32BF4674200C12A51 /* AppDelegate.swift */; };
+		88B8B9F62BF4681100C12A51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8B9F52BF4681100C12A51 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +48,6 @@
 /* Begin PBXFileReference section */
 		883F0E722BE42AE400C7052D /* codeChallengeYapeSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = codeChallengeYapeSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		883F0E752BE42AE400C7052D /* codeChallengeYapeSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = codeChallengeYapeSwiftUIApp.swift; sourceTree = "<group>"; };
-		883F0E772BE42AE400C7052D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		883F0E792BE42AE600C7052D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		883F0E7C2BE42AE600C7052D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		883F0E7E2BE42AE600C7052D /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		883F0E912BE42AE600C7052D /* codeChallengeYapeSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = codeChallengeYapeSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		883F0E952BE42AE600C7052D /* codeChallengeYapeSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = codeChallengeYapeSwiftUIUITests.swift; sourceTree = "<group>"; };
 		883F0E972BE42AE600C7052D /* codeChallengeYapeSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = codeChallengeYapeSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		883F2B462BF55A4F000038AC /* RecipeListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewModelTests.swift; sourceTree = "<group>"; };
 		88B8B9E02BF2B6DA00C12A51 /* DataLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayer.swift; sourceTree = "<group>"; };
 		88B8B9E22BF2B93C00C12A51 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		88B8B9E42BF2BBAC00C12A51 /* RecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,9 @@
 		88B8B9ED2BF2BD6900C12A51 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		88B8B9EF2BF2C1E500C12A51 /* RecipeEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		88B8B9F02BF2C1E500C12A51 /* RecipeEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		88B8B9F32BF4674200C12A51 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		88B8B9F52BF4681100C12A51 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		88DD3C902BF512F000B17191 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../../Downloads/Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +99,9 @@
 		883F0E692BE42AE400C7052D = {
 			isa = PBXGroup;
 			children = (
+				88DD3C902BF512F000B17191 /* Info.plist */,
+				88B8B9F52BF4681100C12A51 /* SceneDelegate.swift */,
+				88B8B9F32BF4674200C12A51 /* AppDelegate.swift */,
 				88B8B9EF2BF2C1E500C12A51 /* RecipeEntity+CoreDataClass.swift */,
 				88B8B9F02BF2C1E500C12A51 /* RecipeEntity+CoreDataProperties.swift */,
 				883F0E742BE42AE400C7052D /* codeChallengeYapeSwiftUI */,
@@ -119,7 +127,6 @@
 				88B8B9DF2BF2B68400C12A51 /* CoreData */,
 				88B8B9DB2BF2B4D300C12A51 /* Modules */,
 				883F0E752BE42AE400C7052D /* codeChallengeYapeSwiftUIApp.swift */,
-				883F0E772BE42AE400C7052D /* ContentView.swift */,
 				883F0E792BE42AE600C7052D /* Assets.xcassets */,
 				883F0E7E2BE42AE600C7052D /* Persistence.swift */,
 				883F0E802BE42AE600C7052D /* codeChallengeYapeSwiftUI.xcdatamodeld */,
@@ -140,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				883F0E8B2BE42AE600C7052D /* codeChallengeYapeSwiftUITests.swift */,
+				883F2B462BF55A4F000038AC /* RecipeListViewModelTests.swift */,
 			);
 			path = codeChallengeYapeSwiftUITests;
 			sourceTree = "<group>";
@@ -376,13 +384,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				88B8B9E32BF2B93C00C12A51 /* CoreDataStack.swift in Sources */,
+				88B8B9F62BF4681100C12A51 /* SceneDelegate.swift in Sources */,
 				883F0E7F2BE42AE600C7052D /* Persistence.swift in Sources */,
 				88B8B9E12BF2B6DA00C12A51 /* DataLayer.swift in Sources */,
 				883F0E822BE42AE600C7052D /* codeChallengeYapeSwiftUI.xcdatamodeld in Sources */,
-				883F0E782BE42AE400C7052D /* ContentView.swift in Sources */,
 				88B8B9EE2BF2BD6900C12A51 /* DetailView.swift in Sources */,
 				883F0E762BE42AE400C7052D /* codeChallengeYapeSwiftUIApp.swift in Sources */,
 				88B8B9E52BF2BBAC00C12A51 /* RecipeListView.swift in Sources */,
+				88B8B9F42BF4674200C12A51 /* AppDelegate.swift in Sources */,
 				88B8B9F12BF2C1E500C12A51 /* RecipeEntity+CoreDataClass.swift in Sources */,
 				88B8B9E92BF2BBD200C12A51 /* RecipeListModel.swift in Sources */,
 				88B8B9F22BF2C1E500C12A51 /* RecipeEntity+CoreDataProperties.swift in Sources */,
@@ -394,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				883F2B472BF55A4F000038AC /* RecipeListViewModelTests.swift in Sources */,
 				883F0E8C2BE42AE600C7052D /* codeChallengeYapeSwiftUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,7 +562,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"codeChallengeYapeSwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -581,7 +591,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"codeChallengeYapeSwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
